@@ -105,6 +105,12 @@ module.exports = function (grunt) {
           filter: 'isFile'
         },{
           expand: true,
+          cwd: 'vendor/requirejs/',
+          src: ['require.js'],
+          dest: 'build/js',
+          filter: 'isFile'
+        },{
+          expand: true,
           cwd: 'source/js/modules/',
           src: ['*/templates/**/*.*'],
           flatten: true,
@@ -118,7 +124,7 @@ module.exports = function (grunt) {
         options: {
           replacements: [{
             pattern: '<script data-main="js/main" src="../vendor/requirejs/require.js"></script>',
-            replacement: '<script data-main="js/script" src="../vendor/requirejs/require.js"></script>'
+            replacement: '<script data-main="js/script" src="js/require.js"></script>'
           }]
         },
         files: {

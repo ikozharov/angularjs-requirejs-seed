@@ -25,7 +25,7 @@ module.exports = function (grunt) {
     sass: {
       development: {
         options: {
-          loadPath: ["source/scss", "vendor/bootstrap-sass/lib"],
+          loadPath: ["source/scss", "vendor/bootstrap-sass/lib", "vendor/bourbon/dist"],
           banner: '<%= meta.banner %>'
         },
         files: {
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
       },
       production: {
         options: {
-          loadPath: ["source/scss", "vendor/bootstrap-sass/lib"],
+          loadPath: ["source/scss", "vendor/bootstrap-sass/lib", "vendor/bourbon/dist"],
           style: "compress",
           banner: '<%= meta.banner %>'
         },

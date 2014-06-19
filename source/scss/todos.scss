@@ -1,0 +1,44 @@
+.todos {
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.todo {
+  @include user-select(none);
+  color: #555;
+  text-shadow: none;
+  .glyphicon {
+    position: absolute;
+    cursor: pointer;
+    right: 2px;
+    visibility: hidden;
+    &:hover {
+      color: #428bca;
+    }
+  }
+  &:hover {
+    background-color: #f5f5f5;
+    .glyphicon {
+      visibility: visible;
+    }
+  }
+  &.completed {
+    color: #3c763d;
+    background-color: #dff0d8;
+    &:hover {
+      color: #3c763d;
+      background-color: #d0e9c6;
+      .glyphicon {
+        visibility: hidden;
+      }
+    }
+  }
+  &.active {
+
+  }
+}
+
+.todos-filter {
+  margin: 30px 0;
+}

@@ -17,7 +17,11 @@
             controller: "GravatarController"
           })
           .when('/todo', {
-            templateUrl: "templates/todo.html",
+            templateUrl: "templates/todos.html",
+            controller: "TodoController"
+          })
+          .when('/todo/:state', {
+            templateUrl: "templates/todos.html",
             controller: "TodoController"
           })
           .otherwise({

@@ -12,7 +12,7 @@
           {
               'id': 2,
               'label': 'Todo',
-              'url': '#/todo'
+              'url': '#todo/active'
           }
       ];
       this.active = 0;

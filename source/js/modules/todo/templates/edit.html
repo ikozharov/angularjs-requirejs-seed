@@ -1,0 +1,7 @@
+<input class="form-control"
+  type="text"
+  placeholder="What needs to be done?"
+  ng-model="todo.title"
+  ng-blur="stopEdit()"
+  ng-keyup="stopEdit($event)"
+/>

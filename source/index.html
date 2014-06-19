@@ -1,27 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A starter project for AngularJS and RequireJS">
+
     <title>AngularJS and RequireJS Seed</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
+
   <body>
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <div navigation class="masthead clearfix"></div>
 
-          <div class="inner cover" ng-view></div>
+    <div class="container">
+      <div class="header">
+        <div navigation></div>
+      </div>
 
-          <div class="mastfoot">
-            <div class="inner">
-              <p>by <a href="https://github.com/ikozharov">I.Kozharov</a></p>
-            </div>
-          </div>
-        </div>
+      <div ng-view></div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p class="text-muted">
+          by <a href="https://github.com/ikozharov">I.Kozharov</a>
+        </p>
       </div>
     </div>
+
     <script data-main="js/main" src="../vendor/requirejs/require.js"></script>
   </body>
 </html>

@@ -1,0 +1,7 @@
+form[name=loginForm] {
+  text-align: center;
+  input[name=email], input[name=password] {
+    width: 250px;
+    margin: 0 auto;
+  }
+}

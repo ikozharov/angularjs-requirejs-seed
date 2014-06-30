@@ -7,12 +7,13 @@
       'modules/todo/services/storage',
       'modules/todo/directives/todoEdit'
     ],
+
     function (angular, TodoController, TodoStorage, TodoEdit) {
       var moduleName = "App.todo",
-        tpl = {
-          todo: 'templates/todo.html',
-          edit: 'templates/edit.html'
-        };
+          tpl = {
+            todo: 'templates/todo.html',
+            edit: 'templates/edit.html'
+          };
 
       angular
         .module(moduleName, [])
@@ -23,6 +24,5 @@
 
       return moduleName;
     });
-
 
 }(define));

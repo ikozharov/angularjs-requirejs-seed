@@ -2,26 +2,20 @@
   "use strict";
 
   define([
-      'angularRoute',
-      'modules/gravatar/index',
-      'modules/todo/index'
+      'angularRoute'
     ],
-    function ($routeProvider, GravatarController, TodoController) {
+    function ($routeProvider) {
       var RouteManager = function ($routeProvider) {
         $routeProvider
           .when('/', {
             templateUrl: "templates/index.html"
           })
-          .when('/gravatar', {
-            templateUrl: "templates/gravatar.html",
-            controller: "GravatarController"
+          .when('/login', {
+            templateUrl: "templates/login.html",
+            controller: "LoginController"
           })
-          .when('/todo', {
-            templateUrl: "templates/todos.html",
-            controller: "TodoController"
-          })
-          .when('/todo/:state', {
-            templateUrl: "templates/todos.html",
+          .when('/:state', {
+            templateUrl: "templates/index.html",
             controller: "TodoController"
           })
           .otherwise({

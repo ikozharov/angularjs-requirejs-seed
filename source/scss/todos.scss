@@ -1,6 +1,5 @@
 .todos {
-  width: 320px;
-  margin: 0 auto;
+  padding: 0;
   text-align: center;
 }
 
@@ -40,5 +39,13 @@
 }
 
 .todos-filter {
+  margin: 30px 0;
+}
+
+.todos-info {
+  margin: 10px 0;
+}
+
+.todos-list {
   margin: 30px 0;
 }

@@ -1,32 +1,38 @@
-<section ng-controller="TodoController" class="todos">
-  <input class="form-control" ng-model="newTodo" ng-keyup="addTodo($event)" type="text" placeholder="What needs to be done?"/>
-
-  <div class="btn-group btn-group-justified todos-filter">
-    <a href="#/todo"
-      class="btn btn-default"
-      role="button"
-      ng-class="{ active: state == '' }">all</a>
-    <a href="#/todo/active"
-      class="btn btn-default"
-      role="button"
-      ng-class="{ active: state == 'active' }">active</a>
-    <a href="#/todo/completed"
-      class="btn btn-default"
-      role="button"
-      ng-class="{ active: state == 'completed' }">done</a>
+<section class='col-md-12 todos' ng-controller="TodoController">
+  <div class='col-md-4'>
+    <gravatar email="currentUser.id" size="200" default-image="'monsterid'"></gravatar>
+    <div class="todos-info">
+      <span>All: {{todos.length}}</span>
+      <span>&#8226</span>
+      <span>Active: {{remainingCount}}</span>
+      <span>&#8226</span>
+      <span>Done: {{doneCount}}</span>
+    </div>
   </div>
+  <div class='col-md-8'>
+    <input class="form-control" ng-model="newTodo" ng-keyup="addTodo($event)" type="text" placeholder="What needs to be done?"/>
 
-  <ul class="todos-list list-group">
-    <li ng-repeat="todo in todos | filter:stateFilter track by $index"
-      ng-class="{ completed: todo.completed}"
-      ng-include="todo.template"
-      class="todo list-group-item">
-    </li>
-  </ul>
+    <div class="btn-group btn-group-justified todos-filter">
+      <a href="#/"
+        class="btn btn-default"
+        role="button"
+        ng-class="{ active: state == '' }">all</a>
+      <a href="#/active"
+        class="btn btn-default"
+        role="button"
+        ng-class="{ active: state == 'active' }">active</a>
+      <a href="#/completed"
+        class="btn btn-default"
+        role="button"
+        ng-class="{ active: state == 'completed' }">done</a>
+    </div>
 
-  <div class="todos-info">
-    <span>All: {{todos.length}}</span>
-    <span>Active: {{remainingCount}}</span>
-    <span>Done: {{doneCount}}</span>
+    <ul class="todos-list list-group">
+      <li ng-repeat="todo in todos | filter:stateFilter track by $index"
+        ng-class="{ completed: todo.completed}"
+        ng-include="todo.template"
+        class="todo list-group-item">
+      </li>
+    </ul>
   </div>
 </section>

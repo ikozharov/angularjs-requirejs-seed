@@ -1,0 +1,13 @@
+<div class="header">
+  <div ng-controller="LoginController">
+    <h3 ng-if="!currentUser" class="pull-right">
+      <a href="#/login">Log in</a>
+    </h3>
+    <h3 ng-if="currentUser" class="pull-right">
+      <a ng-click="logout()" href="#/">Log out</a>
+    </h3>
+    <h3 class="text-muted">
+      <a href="#/" class="home">Todo List</a>
+    </h3>
+  </div>
+</div>
